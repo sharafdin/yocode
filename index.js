@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const path = require("path");
-const { getPrompts } = require("./lib/prompts");
-const { generateFiles } = require("./lib/fileGenerator");
-const { initializeGit } = require("./lib/gitInitializer");
-const { installPackages } = require("./lib/packageInstaller");
+import path from "path";
+import { getPrompts } from "./lib/prompts.js";
+import { generateFiles } from "./lib/fileGenerator.js";
+import { initializeGit } from "./lib/gitInitializer.js";
+import { installPackages } from "./lib/packageInstaller.js";
 
 async function main() {
   console.log(`
