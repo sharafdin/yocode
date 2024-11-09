@@ -1,22 +1,44 @@
 {
   "name": "yocode",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "The VS Code Extension Generator for Modern Development.",
+  "version": "0.0.1",
+  "author": "Mr Sharafdin",
+  "license": "MIT",
+  "main": "./index.js",
   "bin": {
     "yocode": "./index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "homepage": "https://yocode.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sharafdin/yocode.git"
+  },
+  "keywords": [
+    "yocode",
+    "vscode",
+    "extension",
+    "generator",
+    "cli",
+    "development"
+  ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "lib/",
+    "templates/"
+  ],
+  "bugs": {
+    "url": "https://github.com/sharafdin/yocode/issues"
+  },
   "dependencies": {
-    "axios": "^1.7.7",
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.20",
     "ejs": "^3.1.10",
-    "generator-code": "^1.11.4",
-    "inquirer": "^8.2.6",
-    "ora": "^8.1.1"
+    "ora": "^8.1.1",
+    "axios": "^1.7.7"
   }
 }
