@@ -1,0 +1,22 @@
+{
+  "name": "yocode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "yocode": "./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "ejs": "^3.1.10",
+    "generator-code": "^1.11.4",
+    "inquirer": "^8.2.6",
+    "ora": "^8.1.1"
+  }
+}
