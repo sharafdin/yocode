@@ -1,7 +1,7 @@
 {
   "name": "yocode",
   "description": "The VS Code Extension Generator for Modern Development.",
-  "version": "0.0.1",
+  "version": "1.0.0-beta",
   "author": "Mr Sharafdin",
   "license": "MIT",
   "main": "./index.js",
