@@ -1,36 +1,36 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
+// Import VS Code's API for extension development
 const vscode = require('vscode');
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-
 /**
- * @param {vscode.ExtensionContext} context
+ * This method is called when your extension is activated.
+ * Activation happens the first time a registered command is invoked.
+ *
+ * @param {vscode.ExtensionContext} context - Provides access to VS Code extension lifecycle and global storage.
  */
 function activate(context) {
+    console.log('Your extension "<%= name %>" is now active!');
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "<%= name %>" is now active!');
+    /**
+     * Default Command: "Hello World".
+     * This is the default command included with the boilerplate.
+     */
+    const helloWorldCommand = vscode.commands.registerCommand('<%= name %>.helloWorld', () => {
+        vscode.window.showInformationMessage('Hello World from <%= displayName %>!');
+    });
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with  registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('<%= name %>.helloWorld', function () {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from <%= displayName %>!');
-	});
-
-	context.subscriptions.push(disposable);
+    context.subscriptions.push(helloWorldCommand);
 }
 
-// This method is called when your extension is deactivated
-function deactivate() {}
+/**
+ * This method is called when your extension is deactivated.
+ * Used to clean up resources.
+ */
+function deactivate() {
+    console.log('Your extension has been deactivated.');
+}
 
+// Export the activate and deactivate methods
 module.exports = {
-	activate,
-	deactivate
-}
+    activate,
+    deactivate,
+};

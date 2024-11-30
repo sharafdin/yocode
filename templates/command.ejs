@@ -1,0 +1,24 @@
+<% if (languageType === 'TypeScript') { %>
+  import * as vscode from 'vscode';
+  
+  /**
+   * Executes the <%= commandName %> command.
+   */
+  export function <%= functionName %>() {
+      console.log("<%= commandName %> command executed!");
+      vscode.window.showInformationMessage("<%= commandName %> Command Executed!");
+  }
+  <% } else { %>
+  const vscode = require('vscode');
+  
+  /**
+   * Executes the <%= commandName %> command.
+   */
+  function <%= functionName %>() {
+      console.log("<%= commandName %> command executed!");
+      vscode.window.showInformationMessage("<%= commandName %> Command Executed!");
+  }
+  
+  module.exports = { <%= functionName %> };
+  <% } %>
+  
